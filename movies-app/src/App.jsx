@@ -1,10 +1,12 @@
+import MovieWrapper from './components/MoviesWrapper/MoviesWrapper';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Movies App</h1>
-    </div>
+    <>
+      <h1>Navbar</h1>
+      <MovieWrapper />
+    </>
   );
 }
 

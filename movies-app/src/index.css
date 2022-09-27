@@ -1,6 +1,13 @@
+:root {
+  --primary-color: #373b69;
+  --bg-color: #22254b;
+}
+
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,11 +16,11 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   height: 100%;
+  background-color: var(--bg-color);
+  color: white;
 }
 
 img {
