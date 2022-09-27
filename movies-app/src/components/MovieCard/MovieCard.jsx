@@ -1,24 +1,20 @@
 import './MovieCard.css';
 
-const MovieCard = () => {
+const MovieCard = (movie) => {
+  const { original_title, poster_path, vote_average, overview } = movie;
+  const baseImageUrl = 'https://image.tmdb.org/t/p/w500/';
   return (
     <div className="movie-card">
       <div className="movie-card__image">
-        <img
-          src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
-          alt="movie poster"
-        />
+        <img src={`${baseImageUrl}${poster_path}`} alt={original_title} />
       </div>
       <div className="movie-card__info">
-        <h2 className="movie-card__title">Money Plane</h2>
-        <p className="movie-card__description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-          repellendus, enim libero dolor accusantium qui nam explicabo minima
-          corporis sunt, perferendis quae dignissimos perspiciatis voluptate
-          quos et officiis, aliquam ipsam!
-        </p>
+        <h2 className="movie-card__title">{original_title}</h2>
+        <p className="movie-card__description">{overview}</p>
         <div className="movie-card__rating">
-          <span className="movie-card__rating-value">7.5</span>
+          <span className="movie-card__rating-value">
+            {vote_average.toFixed(2)}
+          </span>
         </div>
       </div>
     </div>
