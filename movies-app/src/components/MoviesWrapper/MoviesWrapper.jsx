@@ -1,23 +1,22 @@
 import MovieCard from '../MovieCard/MovieCard';
 import useFetch from '../../useFetch';
 import './MoviesWrapper.css';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { useMovieContext } from '../../context';
 
 const MovieWrapper = () => {
-  const baseURL = `https://api.themoviedb.org/3/trending/all/day?api_key=bec32c4fdb55e1742e85e24a3adc6426`;
-  const { data, loading, error, fetchData } = useFetch(baseURL);
+  const { data, loading, error } = useMovieContext();
 
-  useEffect(() => {
-    let controller = new AbortController();
-
-    fetchData(controller);
-    return () => {
-      controller.abort();
-      console.log('cleanup');
-    };
-  }, []);
-
-  console.log(data.results);
+  if (loading) {
+    return <div className="loading"></div>;
+  }
+  if (error.show) {
+    return (
+      <div className="page-error">
+        <h1>{error.msg}</h1>
+      </div>
+    );
+  }
 
   return (
     <>
