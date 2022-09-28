@@ -1,8 +1,6 @@
 import MovieCard from '../MovieCard/MovieCard';
-import useFetch from '../../useFetch';
-import './MoviesWrapper.css';
-import { useContext, useEffect } from 'react';
 import { useMovieContext } from '../../context';
+import './MoviesWrapper.css';
 
 const MovieWrapper = () => {
   const { data, loading, error } = useMovieContext();
