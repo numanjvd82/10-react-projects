@@ -39,3 +39,22 @@
   color: white;
   margin-right: 1rem;
 }
+
+@media (max-width: 560px) {
+  .navbar {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .navbar.sticky {
+    position: relative;
+  }
+
+  .app-logo {
+    margin: 1rem 0;
+  }
+
+  .search {
+    margin: 1rem 0;
+  }
+}
