@@ -9,7 +9,7 @@ const MovieCard = (movie) => {
         <img src={`${baseImageUrl}${poster_path}`} alt={original_title} />
       </div>
       <div className="movie-card__info">
-        <h2 className="movie-card__title">{original_title}</h2>
+        <h4 className="movie-card__title">{original_title}</h4>
         <p className="movie-card__description">{overview}</p>
         <div className="movie-card__rating">
           <span className="movie-card__rating-value">

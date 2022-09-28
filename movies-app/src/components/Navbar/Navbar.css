@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  height: 80px;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: height 0.5s ease;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+}
+
+.navbar.sticky {
+  height: 60px;
+}
+
+.app-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.search input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.1rem;
+  background: var(--bg-color);
+  color: white;
+  margin-right: 1rem;
+}

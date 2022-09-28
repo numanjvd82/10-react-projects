@@ -1,10 +1,11 @@
 import MovieWrapper from './components/MoviesWrapper/MoviesWrapper';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <>
-      <h1>Navbar</h1>
+      <Navbar />
       <MovieWrapper />
     </>
   );
